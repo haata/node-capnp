@@ -6,6 +6,9 @@
       'libraries': ['-lkj', '-lkj-async', '-lcapnp', '-lcapnpc', '-lcapnp-rpc'],
       'cflags_cc': ['-std=c++14'],
       'cflags_cc!': ['-fno-rtti', '-fno-exceptions'],
+          'include_dirs': [
+            'C:\\ProgramData\\chocolatey\\lib\\capnproto\\tools\\capnproto-c++-0.8.0\\src',
+          ],
       'conditions': [
         ['OS=="mac"', {
           'xcode_settings': {
