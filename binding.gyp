@@ -17,7 +17,12 @@
           },
         }],
         ['OS=="windows"', {
-          'include_dirs': [
+          'include_dirs+': [
+            'C:\\ProgramData\\chocolatey\\lib\\capnproto\\tools\\capnproto-c++-0.8.0\\src',
+          ],
+        }],
+        ['OS=="win32"', {
+          'include_dirs+': [
             'C:\\ProgramData\\chocolatey\\lib\\capnproto\\tools\\capnproto-c++-0.8.0\\src',
           ],
         }],
