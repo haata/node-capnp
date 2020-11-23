@@ -65,6 +65,7 @@ jobs:
     - name: Install dependencies
       run: |
         choco install capnproto
+    - run: npm i -g node-gyp
     - run: node-gyp configure
     - run: node-gyp build --verbose
       #- run: npm install
