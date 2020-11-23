@@ -7,7 +7,7 @@
       'cflags_cc': ['-std=c++14'],
       'cflags_cc!': ['-fno-rtti', '-fno-exceptions'],
       'conditions': [
-        [ 'OS=="mac"', {
+        ['OS=="mac"', {
           'xcode_settings': {
             'OTHER_CPLUSPLUSFLAGS' : ['-std=c++14','-stdlib=libc++'],
             'OTHER_LDFLAGS': ['-stdlib=libc++'],
@@ -15,6 +15,11 @@
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
             'MACOSX_DEPLOYMENT_TARGET': '10.7'
           },
+        }],
+        ['OS=="windows"', {
+          'include_dirs': [
+            '%ProgramData%\\chocolatey\\lib\\capnproto\\tools\\capnproto-c++-0.8.0\\src',
+          ],
         }],
       ]
     }
